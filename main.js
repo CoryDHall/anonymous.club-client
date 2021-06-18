@@ -160,7 +160,6 @@ function GlobeItem({
       fog: false // bumpScale={1}
       ,
       map: tMap,
-      normalMap: tMap,
       shininess: 0,
       side: three__WEBPACK_IMPORTED_MODULE_6__["DoubleSide"],
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("canvasTexture", {
@@ -179,7 +178,7 @@ function GlobeItem({
 
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 114,
+        lineNumber: 113,
         columnNumber: 9
       }, this)
     }, void 0, false, {
@@ -2938,7 +2937,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".App_app__2Lcw_ {\n  position: absolute;\n  inset: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.0625em;\n}", ""]);
+exports.push([module.i, ".App_app__2Lcw_ {\n  position: absolute;\n  inset: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.0625em;\n  font-size: 14px;\n}\n.App_app__2Lcw_ input {\n  font-size: 16px;\n  background: none;\n  color: white;\n  padding: 2px;\n  margin: 0px 2px;\n}", ""]);
 // Exports
 exports.locals = {
 	"app": "App_app__2Lcw_"
@@ -2983,7 +2982,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".Navigation_navigation__3Jak3 {\n  position: fixed;\n  top: 0;\n  inset-inline: 0;\n  z-index: 10;\n  display: flex;\n  justify-content: center;\n  list-style-type: none;\n  color: #b8b8b8;\n}\n.Navigation_navigation__3Jak3 li {\n  margin: 2px 4px;\n}\n.Navigation_navigation__3Jak3 li a {\n  mix-blend-mode: difference;\n  display: block;\n  padding: 8px 32px;\n  color: inherit;\n  font-size: 24px;\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, ".Navigation_navigation__3Jak3 {\n  position: fixed;\n  top: 0;\n  inset-inline: 0;\n  z-index: 10;\n  display: flex;\n  justify-content: center;\n  list-style-type: none;\n  color: #b8b8b8;\n}\n.Navigation_navigation__3Jak3 li {\n  margin: 2px 1.4rem;\n}\n.Navigation_navigation__3Jak3 li a {\n  mix-blend-mode: difference;\n  display: block;\n  padding: 8px 1rem;\n  color: inherit;\n  font-size: 1rem;\n  text-decoration: none;\n}", ""]);
 // Exports
 exports.locals = {
 	"navigation": "Navigation_navigation__3Jak3"
@@ -3486,7 +3485,7 @@ function App() {
           target: {
             value
           }
-        }) => setImg(parseInt(value))
+        }) => isNaN(parseInt(value)) || setImg(parseInt(value))
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 119,
@@ -3500,7 +3499,7 @@ function App() {
           target: {
             value
           }
-        }) => setMod(parseInt(value))
+        }) => isNaN(parseInt(value)) || setMod(parseInt(value))
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 126,
@@ -4553,7 +4552,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"8097774ce47e18a904eb9534cafb6db360512d61028f2532598fe0a757f5d35e","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/8097774ce47e18a904eb9534cafb6db360512d61028f2532598fe0a757f5d35e","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"9c3ba1bccb76496de2e6a213c3c709dc0160f8e8405671913b7a6feadcceddb0","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/9c3ba1bccb76496de2e6a213c3c709dc0160f8e8405671913b7a6feadcceddb0","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
