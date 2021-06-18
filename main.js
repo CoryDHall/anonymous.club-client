@@ -3300,20 +3300,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /Users/coryhall/Code/FL/anonymous.club/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var _App_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.module.scss */ "./app/App.module.scss");
 /* harmony import */ var _App_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_module_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @anonymous.club/ui */ "../../../libs/ui/src/index.ts");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! three */ "../../../node_modules/three/build/three.module.js");
-/* harmony import */ var _react_spring_three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @react-spring/three */ "../../../node_modules/@react-spring/three/dist/react-spring-three.esm.js");
-/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @react-three/fiber */ "../../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
-/* harmony import */ var _MODELS__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MODELS */ "./app/MODELS.tsx");
-/* harmony import */ var _useWorldStore__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./useWorldStore */ "./app/useWorldStore.tsx");
-/* harmony import */ var _navigation_Navigation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./navigation/Navigation */ "./app/navigation/Navigation.tsx");
-/* harmony import */ var _bio_text_BioText__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./bio-text/BioText */ "./app/bio-text/BioText.tsx");
-/* harmony import */ var _IMGS__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./IMGS */ "./app/IMGS.ts");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _anonymous_club_ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @anonymous.club/ui */ "../../../libs/ui/src/index.ts");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! three */ "../../../node_modules/three/build/three.module.js");
+/* harmony import */ var _react_spring_three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @react-spring/three */ "../../../node_modules/@react-spring/three/dist/react-spring-three.esm.js");
+/* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @react-three/fiber */ "../../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
+/* harmony import */ var _MODELS__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./MODELS */ "./app/MODELS.tsx");
+/* harmony import */ var _useWorldStore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./useWorldStore */ "./app/useWorldStore.tsx");
+/* harmony import */ var _navigation_Navigation__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./navigation/Navigation */ "./app/navigation/Navigation.tsx");
+/* harmony import */ var _bio_text_BioText__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./bio-text/BioText */ "./app/bio-text/BioText.tsx");
+/* harmony import */ var _IMGS__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./IMGS */ "./app/IMGS.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__);
 
 
 const _excluded = ["useWorldStore"];
@@ -3333,14 +3332,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
-
  // const imgs = new URL('../assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg', import.meta.url);
 // (async () => {
 //   console.log(await imgArr[0]);
 // })();
 
 
-console.log(_IMGS__WEBPACK_IMPORTED_MODULE_13__["default"]);
+console.log(_IMGS__WEBPACK_IMPORTED_MODULE_12__["default"]);
 
 const ClearOnHoverMaterial = _ref => {
   let {
@@ -3348,14 +3346,14 @@ const ClearOnHoverMaterial = _ref => {
   } = _ref,
       props = Object(_Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
 
-  const ref = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])();
+  const ref = Object(react__WEBPACK_IMPORTED_MODULE_4__["useRef"])();
   const isHeroHovered = useWorldStore(state => 0.3 + 0.7 * ~~!state.isHeroHovered);
   const {
     alpha
-  } = Object(_react_spring_three__WEBPACK_IMPORTED_MODULE_7__["useSpring"])({
+  } = Object(_react_spring_three__WEBPACK_IMPORTED_MODULE_6__["useSpring"])({
     alpha: isHeroHovered
   });
-  Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_8__["useFrame"])(() => {
+  Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_7__["useFrame"])(() => {
     // useEffect(() => {
     // console.log(alpha, isHeroHovered);
     if (typeof ref.current !== 'undefined') {
@@ -3363,7 +3361,7 @@ const ClearOnHoverMaterial = _ref => {
     }
   }); // }, [alpha, ref, isHeroHovered]);
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_7__["animated"].meshPhysicalMaterial, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_6__["animated"].meshPhysicalMaterial, _objectSpread(_objectSpread({}, props), {}, {
     ref: ref // transmission={alpha.get()}
 
   }), void 0, false, {
@@ -3374,34 +3372,34 @@ const ClearOnHoverMaterial = _ref => {
 };
 
 function WorldBackDrop() {
-  const ref = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])();
+  const ref = Object(react__WEBPACK_IMPORTED_MODULE_4__["useRef"])();
   const {
     gl
-  } = Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_8__["useThree"])();
+  } = Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_7__["useThree"])();
   const context = gl.getContext();
-  const points = Object(react__WEBPACK_IMPORTED_MODULE_5__["useMemo"])(() => {
+  const points = Object(react__WEBPACK_IMPORTED_MODULE_4__["useMemo"])(() => {
     const bigR = Math.max(context.drawingBufferHeight, context.drawingBufferWidth);
-    return new three__WEBPACK_IMPORTED_MODULE_6__["EllipseCurve"](1, 0, bigR, bigR, 0.5 * Math.PI, 1.5 * Math.PI, true, 0).getSpacedPoints(64);
+    return new three__WEBPACK_IMPORTED_MODULE_5__["EllipseCurve"](1, 0, bigR, bigR, 0.5 * Math.PI, 1.5 * Math.PI, true, 0).getSpacedPoints(64);
   }, [context.drawingBufferHeight, context.drawingBufferWidth]);
-  Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_8__["useFrame"])(({
+  Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_7__["useFrame"])(({
     camera
   }) => {
     if (!ref.current) return;
     ref.current.rotation.copy(camera.rotation);
   });
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("mesh", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("mesh", {
     // castShadow
     receiveShadow: true,
     layers: 0,
     ref: ref,
     scale: [1.01, 1.01, 1.01],
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("latheGeometry", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("latheGeometry", {
       args: [points, 64, Math.PI * 0.5, Math.PI * 1.0]
     }, void 0, false, {
       fileName: _jsxFileName,
       lineNumber: 69,
       columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("meshStandardMaterial", {
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("meshStandardMaterial", {
       // wireframe
       attach: "material" // clearcoat={1}
       // clearcoatRoughness={0.99}
@@ -3441,139 +3439,133 @@ const LINKS = [{
   copy: 'HBA x Anonymous'
 }];
 function App() {
-  const [img, setImg] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(27);
-  const [mod, setMod] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(2);
-  const CurrentFigure = _MODELS__WEBPACK_IMPORTED_MODULE_9__["MODELS"][mod];
-  const hideBG = Object(_useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"])(state => state.shouldShowBottom);
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("div", {
-      className: _App_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.app,
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("div", {
-        style: {
-          position: 'fixed',
-          zIndex: 1000
-        },
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("input", {
-          max: _IMGS__WEBPACK_IMPORTED_MODULE_13__["default"].length - 1,
-          min: 0,
-          type: "number",
-          value: img,
-          onChange: ({
-            target: {
-              value
-            }
-          }) => setImg(parseInt(value))
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 120,
-          columnNumber: 11
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("input", {
-          max: _MODELS__WEBPACK_IMPORTED_MODULE_9__["MODELS"].length - 1,
-          min: 0,
-          type: "number",
-          value: mod,
-          onChange: ({
-            target: {
-              value
-            }
-          }) => setMod(parseInt(value))
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 127,
-          columnNumber: 11
-        }, this)]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 117,
-        columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_navigation_Navigation__WEBPACK_IMPORTED_MODULE_11__["Navigation"], {
-        links: LINKS
+  const [img, setImg] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(27);
+  const [mod, setMod] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(2);
+  const CurrentFigure = _MODELS__WEBPACK_IMPORTED_MODULE_8__["MODELS"][mod];
+  const hideBG = Object(_useWorldStore__WEBPACK_IMPORTED_MODULE_9__["useWorldStore"])(state => state.shouldShowBottom);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("div", {
+    className: _App_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.app,
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("div", {
+      style: {
+        position: 'fixed',
+        zIndex: 1000
+      },
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("input", {
+        max: _IMGS__WEBPACK_IMPORTED_MODULE_12__["default"].length - 1,
+        min: 0,
+        type: "number",
+        value: img,
+        onChange: ({
+          target: {
+            value
+          }
+        }) => setImg(parseInt(value))
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 119,
         columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["WorldEnvironment"], {
-        useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"],
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(WorldBackDrop, {}, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 141,
-          columnNumber: 11
-        }, this), hideBG || /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["Globe"], {
-          imgs: [_IMGS__WEBPACK_IMPORTED_MODULE_13__["default"][img]]
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 142,
-          columnNumber: 23
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(CurrentFigure // Model={ANO_CHI_01_HIRES}
-        // position={[0, 20, -600]}
-        // layers={1}
-        // scale={1.0}
-        , {
-          scale: 0.2,
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(ClearOnHoverMaterial, {
-            useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"],
-            flatShading: true // vertexColors
-            // vertexTangents
-            ,
-            transparent: true // attach="material"
-            // wireframe
-            ,
-            clearcoat: 1,
-            clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
-            // color={0xffffff - 0xebf8fb}
-            // ior={1.0}
-            ,
-            color: 0xebf8fb // depthTest={false}
-            ,
-            ior: 2.3,
-            metalness: 0.92,
-            reflectivity: 0.9984 // metalness={0.098}
-            ,
-            roughness: 0.07062005,
-            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("color", {
-              args: [0x010f0f] // args={[0x010000]}
-              ,
-              attach: "emissive"
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 173,
-              columnNumber: 15
-            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("color", {
-              args: [0xeeefdd] // args={[0x010000]}
-              ,
-              attach: "sheen"
-            }, void 0, false, {
-              fileName: _jsxFileName,
-              lineNumber: 178,
-              columnNumber: 15
-            }, this)]
-          }, void 0, true, {
-            fileName: _jsxFileName,
-            lineNumber: 150,
-            columnNumber: 13
-          }, this)
-        }, void 0, false, {
-          fileName: _jsxFileName,
-          lineNumber: 143,
-          columnNumber: 11
-        }, this)]
-      }, void 0, true, {
-        fileName: _jsxFileName,
-        lineNumber: 136,
-        columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_bio_text_BioText__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"]
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("input", {
+        max: _MODELS__WEBPACK_IMPORTED_MODULE_8__["MODELS"].length - 1,
+        min: 0,
+        type: "number",
+        value: mod,
+        onChange: ({
+          target: {
+            value
+          }
+        }) => setMod(parseInt(value))
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 192,
+        lineNumber: 126,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
       lineNumber: 116,
       columnNumber: 7
-    }, this)
-  }, void 0, false, {
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_navigation_Navigation__WEBPACK_IMPORTED_MODULE_10__["Navigation"], {
+      links: LINKS
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 7
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_3__["WorldEnvironment"], {
+      useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_9__["useWorldStore"],
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(WorldBackDrop, {}, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 140,
+        columnNumber: 9
+      }, this), hideBG || /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_3__["Globe"], {
+        imgs: [_IMGS__WEBPACK_IMPORTED_MODULE_12__["default"][img]]
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 141,
+        columnNumber: 21
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(CurrentFigure // Model={ANO_CHI_01_HIRES}
+      // position={[0, 20, -600]}
+      // layers={1}
+      // scale={1.0}
+      , {
+        scale: 0.2,
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(ClearOnHoverMaterial, {
+          useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_9__["useWorldStore"],
+          flatShading: true // vertexColors
+          // vertexTangents
+          ,
+          transparent: true // attach="material"
+          // wireframe
+          ,
+          clearcoat: 1,
+          clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
+          // color={0xffffff - 0xebf8fb}
+          // ior={1.0}
+          ,
+          color: 0xebf8fb // depthTest={false}
+          ,
+          ior: 2.3,
+          metalness: 0.92,
+          reflectivity: 0.9984 // metalness={0.098}
+          ,
+          roughness: 0.07062005,
+          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("color", {
+            args: [0x010f0f] // args={[0x010000]}
+            ,
+            attach: "emissive"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 172,
+            columnNumber: 13
+          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("color", {
+            args: [0xeeefdd] // args={[0x010000]}
+            ,
+            attach: "sheen"
+          }, void 0, false, {
+            fileName: _jsxFileName,
+            lineNumber: 177,
+            columnNumber: 13
+          }, this)]
+        }, void 0, true, {
+          fileName: _jsxFileName,
+          lineNumber: 149,
+          columnNumber: 11
+        }, this)
+      }, void 0, false, {
+        fileName: _jsxFileName,
+        lineNumber: 142,
+        columnNumber: 9
+      }, this)]
+    }, void 0, true, {
+      fileName: _jsxFileName,
+      lineNumber: 135,
+      columnNumber: 7
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_bio_text_BioText__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_9__["useWorldStore"]
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 191,
+      columnNumber: 7
+    }, this)]
+  }, void 0, true, {
     fileName: _jsxFileName,
     lineNumber: 115,
     columnNumber: 5
@@ -4534,21 +4526,22 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"93d2be4e99d9e710a632c0844377660e12295f71d360be63bf724a40aeb19533","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/93d2be4e99d9e710a632c0844377660e12295f71d360be63bf724a40aeb19533","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
-  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], {
+  children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 7
     }, undefined)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 9,
+    lineNumber: 10,
     columnNumber: 5
   }, undefined)
 }, void 0, false, {
   fileName: _jsxFileName,
-  lineNumber: 8,
+  lineNumber: 9,
   columnNumber: 3
 }, undefined), document.getElementById('root'));
 
