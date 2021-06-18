@@ -203,7 +203,7 @@ function GlobeItem({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./HeroFigurine.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/hero-figurine/HeroFigurine.module.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./HeroFigurine.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/hero-figurine/HeroFigurine.module.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -243,8 +243,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HeroFigurine_module_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_HeroFigurine_module_scss__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _use_gesture_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @use-gesture/react */ "../../../node_modules/@use-gesture/react/dist/use-gesture-react.esm.js");
 /* harmony import */ var _react_spring_three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @react-spring/three */ "../../../node_modules/@react-spring/three/dist/react-spring-three.esm.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _world_environment_INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../world-environment/INITIAL_CAMERA_POSITION */ "../../../libs/ui/src/lib/world-environment/INITIAL_CAMERA_POSITION.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__);
 
 
 const _excluded = ["Model", "useWorldStore"];
@@ -260,6 +261,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+/* eslint-disable-next-line */
+
+
 function HeroFigurine(_ref) {
   let {
     Model,
@@ -269,9 +273,9 @@ function HeroFigurine(_ref) {
 
   // const onHeroHover = useCallback(useWorldStore(state => state.onHeroHover), [useWorldStore]);
   // const bind = useHover(onHeroHover);
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(Model, _objectSpread({}, props), void 0, false, {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(Model, _objectSpread({}, props), void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 21,
+    lineNumber: 22,
     columnNumber: 5
   }, this);
 }
@@ -298,14 +302,14 @@ const asHeroFigurine = (Component, useStore) => {
       }
 
       if (typeof modelRef.current !== 'undefined') {
-        modelRef.current.rotation.copy(camera.rotation);
+        modelRef.current.scale.setScalar((_world_environment_INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_7__["INITIAL_CAMERA_POSITION_LENGTH"] / camera.position.length()) ** -1); // modelRef.current.rotation.copy(camera.rotation);
       }
     });
-    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])("group", {
+    return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("group", {
       ref: modelRef,
-      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_3__["Suspense"], {
+      children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_3__["Suspense"], {
         fallback: null,
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_6__["animated"].group, {
+        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_6__["animated"].group, {
           ref: groupRef,
           rotation: [0, 0, 0] // rotation-y={rY.get()}
           ,
@@ -315,26 +319,26 @@ const asHeroFigurine = (Component, useStore) => {
           onPointerOut: () => onHeroHover({
             down: false
           }),
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__["jsxDEV"])(Component, _objectSpread(_objectSpread({}, props), {}, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(Component, _objectSpread(_objectSpread({}, props), {}, {
             onLoad
           }), void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 58,
+            lineNumber: 60,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 49,
+          lineNumber: 51,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 50,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 49,
       columnNumber: 7
     }, undefined);
   };
@@ -483,7 +487,7 @@ function EnvironmentEffects() {
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["DepthOfField"], {
       blendFunction: postprocessing__WEBPACK_IMPORTED_MODULE_1__["BlendFunction"].NORMAL,
       bokehScale: 0.95,
-      focalLength: 0.4
+      focalLength: 0.8
     }, void 0, false, {
       fileName: _jsxFileName,
       lineNumber: 10,
@@ -499,7 +503,7 @@ function EnvironmentEffects() {
       lineNumber: 15,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["Vignette"], {
-      darkness: 0.25,
+      darkness: 0.95,
       eskil: false,
       offset: 0.2
     }, void 0, false, {
@@ -524,6 +528,26 @@ function EnvironmentEffects() {
 
 /***/ }),
 
+/***/ "../../../libs/ui/src/lib/world-environment/INITIAL_CAMERA_POSITION.tsx":
+/*!************************************************************************************************************!*\
+  !*** /Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world-environment/INITIAL_CAMERA_POSITION.tsx ***!
+  \************************************************************************************************************/
+/*! exports provided: INITIAL_CAMERA_POSITION, INITIAL_CAMERA_POSITION_LENGTH_SQ, INITIAL_CAMERA_POSITION_LENGTH */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INITIAL_CAMERA_POSITION", function() { return INITIAL_CAMERA_POSITION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INITIAL_CAMERA_POSITION_LENGTH_SQ", function() { return INITIAL_CAMERA_POSITION_LENGTH_SQ; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INITIAL_CAMERA_POSITION_LENGTH", function() { return INITIAL_CAMERA_POSITION_LENGTH; });
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "../../../node_modules/three/build/three.module.js");
+
+const INITIAL_CAMERA_POSITION = new three__WEBPACK_IMPORTED_MODULE_0__["Vector3"](0, 100, 500);
+const INITIAL_CAMERA_POSITION_LENGTH_SQ = INITIAL_CAMERA_POSITION.lengthSq();
+const INITIAL_CAMERA_POSITION_LENGTH = INITIAL_CAMERA_POSITION.length();
+
+/***/ }),
+
 /***/ "../../../libs/ui/src/lib/world-environment/InternalCamera.tsx":
 /*!***************************************************************************************************!*\
   !*** /Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world-environment/InternalCamera.tsx ***!
@@ -537,10 +561,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _react_three_fiber__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @react-three/fiber */ "../../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./INITIAL_CAMERA_POSITION */ "../../../libs/ui/src/lib/world-environment/INITIAL_CAMERA_POSITION.tsx");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world-environment/InternalCamera.tsx";
 // import { PointerLockControls } from '@react-three/drei';
+
 
 
 
@@ -553,20 +579,26 @@ function InternalCamera() {
     domElement
   } = Object(_react_three_fiber__WEBPACK_IMPORTED_MODULE_0__["useThree"])(state => state.gl);
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
-    camera.position.set(0, 100, 500); // camera.rotation.set(0, -10, 0);
+    console.log(camera);
+    camera.position.copy(_INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_2__["INITIAL_CAMERA_POSITION"]); // camera.rotation.set(0, -10, 0);
 
     if (!controls.current) return;
     controls.current.target.set(0, 0, 0);
-    controls.current.maxDistance = 1000;
+    controls.current.maxDistance = 1200;
+    controls.current.enablePan = false;
+    controls.current.maxAzimuthAngle = 0.125 * Math.PI;
+    controls.current.minAzimuthAngle = -0.125 * Math.PI;
+    controls.current.minPolarAngle = 0.375 * Math.PI;
+    controls.current.maxPolarAngle = 0.625 * Math.PI;
     controls.current.update();
     console.log(controls);
   }, [controls, camera]);
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("orbitControls", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxDEV"])("orbitControls", {
     args: [camera, domElement],
     ref: controls
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 22,
+    lineNumber: 28,
     columnNumber: 5
   }, this);
 }
@@ -594,7 +626,7 @@ const SHADOW_SCALE = 128;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./WorldEnvironment.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/world-environment/WorldEnvironment.module.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./WorldEnvironment.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/world-environment/WorldEnvironment.module.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -917,7 +949,7 @@ function WorldLights({
       decay: 30,
       distance: 0,
       freq: 0.5,
-      intensity: 0.5,
+      intensity: 4.5,
       layers: 1,
       offset: 3.14,
       radius: 400,
@@ -2834,7 +2866,7 @@ for (var COLLECTION_NAME in DOMIterables) {
 
 /***/ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/hero-figurine/HeroFigurine.module.scss":
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/hero-figurine/HeroFigurine.module.scss ***!
+  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/hero-figurine/HeroFigurine.module.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2852,7 +2884,7 @@ module.exports = exports;
 
 /***/ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!../../../libs/ui/src/lib/world-environment/WorldEnvironment.module.scss":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world-environment/WorldEnvironment.module.scss ***!
+  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world-environment/WorldEnvironment.module.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2870,7 +2902,7 @@ module.exports = exports;
 
 /***/ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/App.module.scss":
 /*!******************************************************************************************************************************************************************************************************!*\
-  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/App.module.scss ***!
+  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/App.module.scss ***!
   \******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2891,7 +2923,7 @@ module.exports = exports;
 
 /***/ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/bio-text/BioText.module.scss":
 /*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/bio-text/BioText.module.scss ***!
+  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/bio-text/BioText.module.scss ***!
   \*******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2915,7 +2947,7 @@ module.exports = exports;
 
 /***/ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/navigation/Navigation.module.scss":
 /*!************************************************************************************************************************************************************************************************************************!*\
-  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/navigation/Navigation.module.scss ***!
+  !*** /Users/coryhall/Code/FL/anonymous.club/node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!/Users/coryhall/Code/FL/anonymous.club/node_modules/sass-loader/dist/cjs.js!./app/navigation/Navigation.module.scss ***!
   \************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3234,7 +3266,7 @@ module.exports = function (list, options) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!../../../../node_modules/sass-loader/dist/cjs.js!./App.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/App.module.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!../../../../node_modules/sass-loader/dist/cjs.js!./App.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/App.module.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -3279,8 +3311,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _useWorldStore__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./useWorldStore */ "./app/useWorldStore.tsx");
 /* harmony import */ var _navigation_Navigation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./navigation/Navigation */ "./app/navigation/Navigation.tsx");
 /* harmony import */ var _bio_text_BioText__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./bio-text/BioText */ "./app/bio-text/BioText.tsx");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _IMGS__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./IMGS */ "./app/IMGS.ts");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__);
 
 
 const _excluded = ["useWorldStore"];
@@ -3301,8 +3334,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+ // const imgs = new URL('../assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg', import.meta.url);
+// (async () => {
+//   console.log(await imgArr[0]);
+// })();
 
-const CurrentFigure = _MODELS__WEBPACK_IMPORTED_MODULE_9__["MODELS"][1];
+
+console.log(_IMGS__WEBPACK_IMPORTED_MODULE_13__["default"]);
 
 const ClearOnHoverMaterial = _ref => {
   let {
@@ -3325,12 +3363,12 @@ const ClearOnHoverMaterial = _ref => {
     }
   }); // }, [alpha, ref, isHeroHovered]);
 
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_7__["animated"].meshPhysicalMaterial, _objectSpread(_objectSpread({}, props), {}, {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_7__["animated"].meshPhysicalMaterial, _objectSpread(_objectSpread({}, props), {}, {
     ref: ref // transmission={alpha.get()}
 
   }), void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 35,
+    lineNumber: 38,
     columnNumber: 5
   }, undefined);
 };
@@ -3351,19 +3389,19 @@ function WorldBackDrop() {
     if (!ref.current) return;
     ref.current.rotation.copy(camera.rotation);
   });
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("mesh", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("mesh", {
     // castShadow
     receiveShadow: true,
     layers: 0,
     ref: ref,
     scale: [1.01, 1.01, 1.01],
-    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("latheGeometry", {
+    children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("latheGeometry", {
       args: [points, 64, Math.PI * 0.5, Math.PI * 1.0]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 69,
       columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("meshStandardMaterial", {
+    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("meshStandardMaterial", {
       // wireframe
       attach: "material" // clearcoat={1}
       // clearcoatRoughness={0.99}
@@ -3376,12 +3414,12 @@ function WorldBackDrop() {
 
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 71,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
     fileName: _jsxFileName,
-    lineNumber: 58,
+    lineNumber: 61,
     columnNumber: 5
   }, this);
 }
@@ -3390,107 +3428,171 @@ const LINKS = [{
   href: '/',
   copy: 'Home'
 }, {
+  href: '/archive',
+  copy: 'Archive'
+}, {
+  href: '/cv',
+  copy: 'CV'
+}, {
   href: '/bio',
   copy: 'Bio'
+}, {
+  href: '/hba',
+  copy: 'HBA x Anonymous'
 }];
 function App() {
+  const [img, setImg] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(27);
+  const [mod, setMod] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(2);
+  const CurrentFigure = _MODELS__WEBPACK_IMPORTED_MODULE_9__["MODELS"][mod];
   const hideBG = Object(_useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"])(state => state.shouldShowBottom);
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], {
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("div", {
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["BrowserRouter"], {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("div", {
       className: _App_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.app,
-      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_navigation_Navigation__WEBPACK_IMPORTED_MODULE_11__["Navigation"], {
+      children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("div", {
+        style: {
+          position: 'fixed',
+          zIndex: 1000
+        },
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("input", {
+          max: _IMGS__WEBPACK_IMPORTED_MODULE_13__["default"].length - 1,
+          min: 0,
+          type: "number",
+          value: img,
+          onChange: ({
+            target: {
+              value
+            }
+          }) => setImg(parseInt(value))
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 120,
+          columnNumber: 11
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("input", {
+          max: _MODELS__WEBPACK_IMPORTED_MODULE_9__["MODELS"].length - 1,
+          min: 0,
+          type: "number",
+          value: mod,
+          onChange: ({
+            target: {
+              value
+            }
+          }) => setMod(parseInt(value))
+        }, void 0, false, {
+          fileName: _jsxFileName,
+          lineNumber: 127,
+          columnNumber: 11
+        }, this)]
+      }, void 0, true, {
+        fileName: _jsxFileName,
+        lineNumber: 117,
+        columnNumber: 9
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_navigation_Navigation__WEBPACK_IMPORTED_MODULE_11__["Navigation"], {
         links: LINKS
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 135,
         columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["WorldEnvironment"], {
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["WorldEnvironment"], {
         useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"],
-        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(WorldBackDrop, {}, void 0, false, {
+        children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(WorldBackDrop, {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 105,
+          lineNumber: 141,
           columnNumber: 11
-        }, this), hideBG || /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["Globe"], {
-          imgs: ['assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg']
+        }, this), hideBG || /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["Globe"], {
+          imgs: [_IMGS__WEBPACK_IMPORTED_MODULE_13__["default"][img]]
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 106,
+          lineNumber: 142,
           columnNumber: 23
-        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(CurrentFigure // Model={ANO_CHI_01_HIRES}
+        }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(CurrentFigure // Model={ANO_CHI_01_HIRES}
         // position={[0, 20, -600]}
+        // layers={1}
+        // scale={1.0}
         , {
-          layers: 1,
           scale: 0.2,
-          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(ClearOnHoverMaterial, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(ClearOnHoverMaterial, {
             useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"],
-            // flatShading
-            // vertexColors
+            flatShading: true // vertexColors
             // vertexTangents
+            ,
+            transparent: true // attach="material"
             // wireframe
-            // attach="material"
-            transparent: true,
+            ,
             clearcoat: 1,
             clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
+            // color={0xffffff - 0xebf8fb}
+            // ior={1.0}
             ,
-            color: 0xffffff - 0xebf8fb // ior={1.0}
+            color: 0xebf8fb // depthTest={false}
             ,
-            ior: 2.3 // depthTest={false}
-            // color={0xebf8fb}
-            ,
-            metalness: 0.22,
+            ior: 2.3,
+            metalness: 0.92,
             reflectivity: 0.9984 // metalness={0.098}
             ,
-            roughness: 0.7062005,
-            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("color", {
+            roughness: 0.07062005,
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("color", {
               args: [0x010f0f] // args={[0x010000]}
               ,
               attach: "emissive"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 136,
+              lineNumber: 173,
               columnNumber: 15
-            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])("color", {
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])("color", {
               args: [0xeeefdd] // args={[0x010000]}
               ,
               attach: "sheen"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 141,
+              lineNumber: 178,
               columnNumber: 15
             }, this)]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 113,
+            lineNumber: 150,
             columnNumber: 13
           }, this)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 143,
           columnNumber: 11
         }, this)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 100,
+        lineNumber: 136,
         columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_bio_text_BioText__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_14__["jsxDEV"])(_bio_text_BioText__WEBPACK_IMPORTED_MODULE_12__["default"], {
         useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_10__["useWorldStore"]
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 192,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 116,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 97,
+    lineNumber: 115,
     columnNumber: 5
   }, this);
 }
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./app/IMGS.ts":
+/*!*********************!*\
+  !*** ./app/IMGS.ts ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([__webpack_require__(/*! ../assets/Links/01_10-Edit copy 2.jpg */ "./assets/Links/01_10-Edit copy 2.jpg"), __webpack_require__(/*! ../assets/Links/07_10 copy 2.jpg */ "./assets/Links/07_10 copy 2.jpg"), __webpack_require__(/*! ../assets/Links/12_06 copy 2.jpg */ "./assets/Links/12_06 copy 2.jpg"), __webpack_require__(/*! ../assets/Links/14_07-Edit copy 2.jpg */ "./assets/Links/14_07-Edit copy 2.jpg"), __webpack_require__(/*! ../assets/Links/ANON 5 RABIT INVERTED.jpg */ "./assets/Links/ANON 5 RABIT INVERTED.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_04.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_04.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_05.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_05.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_06.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_06.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_07.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_07.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_08.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_08.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_10.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_10.jpg"), __webpack_require__(/*! ../assets/Links/Anonymous_200626_Validated Design_Page_11.jpg */ "./assets/Links/Anonymous_200626_Validated Design_Page_11.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock1.jpg */ "./assets/Links/Dazedmock1.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock2.jpg */ "./assets/Links/Dazedmock2.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock3.jpg */ "./assets/Links/Dazedmock3.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock4.jpg */ "./assets/Links/Dazedmock4.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock5.jpg */ "./assets/Links/Dazedmock5.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock6.jpg */ "./assets/Links/Dazedmock6.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock7.jpg */ "./assets/Links/Dazedmock7.jpg"), __webpack_require__(/*! ../assets/Links/Dazedmock8.jpg */ "./assets/Links/Dazedmock8.jpg"), __webpack_require__(/*! ../assets/Links/HBA (3)_R1_QC_RGB_300dpi copy.jpg */ "./assets/Links/HBA (3)_R1_QC_RGB_300dpi copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA (4)_R2_QC_RGB_300dpi copy.jpg */ "./assets/Links/HBA (4)_R2_QC_RGB_300dpi copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA Polas_032 copy.jpg */ "./assets/Links/HBA Polas_032 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA Polas_18 copy.jpg */ "./assets/Links/HBA Polas_18 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_015 copy.jpg */ "./assets/Links/HBA_015 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_017 copy.jpg */ "./assets/Links/HBA_017 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_03 copy.jpg */ "./assets/Links/HBA_03 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg */ "./assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_04_R2_QC_RGB_300dpi copy.jpg */ "./assets/Links/HBA_04_R2_QC_RGB_300dpi copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_07 copy.jpg */ "./assets/Links/HBA_07 copy.jpg"), __webpack_require__(/*! ../assets/Links/HBA_R1_QC_RGB_300dpi copy.jpg */ "./assets/Links/HBA_R1_QC_RGB_300dpi copy.jpg"), __webpack_require__(/*! ../assets/Links/JULY 29 3 FINAL .jpg */ "./assets/Links/JULY 29 3 FINAL .jpg"), __webpack_require__(/*! ../assets/Links/_DSC4291.jpg */ "./assets/Links/_DSC4291.jpg"), __webpack_require__(/*! ../assets/Links/_DSC4457-Edit.jpg */ "./assets/Links/_DSC4457-Edit.jpg"), __webpack_require__(/*! ../assets/Links/_DSC4469.jpg */ "./assets/Links/_DSC4469.jpg"), __webpack_require__(/*! ../assets/Links/_DSC4470.jpg */ "./assets/Links/_DSC4470.jpg"), __webpack_require__(/*! ../assets/Links/anon 3 yves deli.jpg */ "./assets/Links/anon 3 yves deli.jpg"), __webpack_require__(/*! ../assets/Links/anon august 26.jpg */ "./assets/Links/anon august 26.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 4.jpg */ "./assets/Links/anonymous 4.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 5.jpg */ "./assets/Links/anonymous 5.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 6.jpg */ "./assets/Links/anonymous 6.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 7 copy.jpg */ "./assets/Links/anonymous 7 copy.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 8.jpg */ "./assets/Links/anonymous 8.jpg"), __webpack_require__(/*! ../assets/Links/anonymous 9.jpg */ "./assets/Links/anonymous 9.jpg"), __webpack_require__(/*! ../assets/Links/anonymous1.jpg */ "./assets/Links/anonymous1.jpg"), __webpack_require__(/*! ../assets/Links/anonymous3.jpg */ "./assets/Links/anonymous3.jpg"), __webpack_require__(/*! ../assets/Links/cuzzibay.jpg */ "./assets/Links/cuzzibay.jpg"), __webpack_require__(/*! ../assets/Links/headache redu.jpg */ "./assets/Links/headache redu.jpg"), __webpack_require__(/*! ../assets/Links/still 13.jpg */ "./assets/Links/still 13.jpg"), __webpack_require__(/*! ../assets/Links/still 14.jpg */ "./assets/Links/still 14.jpg"), __webpack_require__(/*! ../assets/Links/still 15.jpg */ "./assets/Links/still 15.jpg"), __webpack_require__(/*! ../assets/Links/still 16.jpg */ "./assets/Links/still 16.jpg"), __webpack_require__(/*! ../assets/Links/still 17.jpg */ "./assets/Links/still 17.jpg"), __webpack_require__(/*! ../assets/Links/still 18.jpg */ "./assets/Links/still 18.jpg"), __webpack_require__(/*! ../assets/Links/still 19.jpg */ "./assets/Links/still 19.jpg"), __webpack_require__(/*! ../assets/Links/still 20.jpg */ "./assets/Links/still 20.jpg")]);
 
 /***/ }),
 
@@ -3508,11 +3610,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @anonymous.club/ui */ "../../../libs/ui/src/index.ts");
 /* harmony import */ var _models_ANO_LOGO_01__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/ANO_LOGO_01 */ "./models/ANO_LOGO_01.tsx");
 /* harmony import */ var _useWorldStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./useWorldStore */ "./app/useWorldStore.tsx");
+/* harmony import */ var _models_ANO_LOGO_02__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../models/ANO_LOGO_02 */ "./models/ANO_LOGO_02.tsx");
 
 
 
 
-const MODELS = [_models_ANO_CHI_01_HIRES__WEBPACK_IMPORTED_MODULE_0__["default"], _models_ANO_LOGO_01__WEBPACK_IMPORTED_MODULE_2__["default"]].map(m => Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["asHeroFigurine"])(m, _useWorldStore__WEBPACK_IMPORTED_MODULE_3__["useWorldStore"]));
+
+const MODELS = [_models_ANO_CHI_01_HIRES__WEBPACK_IMPORTED_MODULE_0__["default"], _models_ANO_LOGO_01__WEBPACK_IMPORTED_MODULE_2__["default"], _models_ANO_LOGO_02__WEBPACK_IMPORTED_MODULE_4__["default"]].map(m => Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["asHeroFigurine"])(m, _useWorldStore__WEBPACK_IMPORTED_MODULE_3__["useWorldStore"]));
 ;
 
 /***/ }),
@@ -3524,7 +3628,7 @@ const MODELS = [_models_ANO_CHI_01_HIRES__WEBPACK_IMPORTED_MODULE_0__["default"]
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./BioText.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/bio-text/BioText.module.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./BioText.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/bio-text/BioText.module.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -3620,7 +3724,7 @@ function BioText(props) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./Navigation.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/navigation/Navigation.module.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js??ref--7-oneOf-1-1!../../../../../node_modules/sass-loader/dist/cjs.js!./Navigation.module.scss */ "../../../node_modules/css-loader/dist/cjs.js?!../../../node_modules/sass-loader/dist/cjs.js!./app/navigation/Navigation.module.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -3758,6 +3862,655 @@ const useWorldStore = Object(zustand__WEBPACK_IMPORTED_MODULE_1__["default"])((s
 
 /***/ }),
 
+/***/ "./assets/210611/ANO_CHI_01_HIRES.glb":
+/*!********************************************!*\
+  !*** ./assets/210611/ANO_CHI_01_HIRES.glb ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/models/cdab4f336d4b7b0f9592a0e65db064d2.glb";
+
+/***/ }),
+
+/***/ "./assets/210611/ANO_LOGO_01.glb":
+/*!***************************************!*\
+  !*** ./assets/210611/ANO_LOGO_01.glb ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/models/a00fe93a812bb87d40470aeef5625cbd.glb";
+
+/***/ }),
+
+/***/ "./assets/210611/ANO_LOGO_02.glb":
+/*!***************************************!*\
+  !*** ./assets/210611/ANO_LOGO_02.glb ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/models/d79739650452b84d130805cab95f3395.glb";
+
+/***/ }),
+
+/***/ "./assets/Links/01_10-Edit copy 2.jpg":
+/*!********************************************!*\
+  !*** ./assets/Links/01_10-Edit copy 2.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f87142a8a3caf84125a5717e0bac6014.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/07_10 copy 2.jpg":
+/*!***************************************!*\
+  !*** ./assets/Links/07_10 copy 2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/25b3f7d82c7f67042891abea7a0eae06.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/12_06 copy 2.jpg":
+/*!***************************************!*\
+  !*** ./assets/Links/12_06 copy 2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7c2f08b6059b7d8401205ec5e969bb08.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/14_07-Edit copy 2.jpg":
+/*!********************************************!*\
+  !*** ./assets/Links/14_07-Edit copy 2.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ee2676c73819ea5e061ba7284881f380.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/ANON 5 RABIT INVERTED.jpg":
+/*!************************************************!*\
+  !*** ./assets/Links/ANON 5 RABIT INVERTED.jpg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2200ddd6e97b95500219e2ff78d7b028.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_04.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_04.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f4c1fc369ee11f744f0b9a3031fe74a3.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_05.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_05.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9fd616183d2c763a9ed5a2f2717215d0.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_06.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_06.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/72c929feea6cc9682eea22109fea04d4.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_07.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_07.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/58b94107e21cedff8be43793ed6c7cb5.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_08.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_08.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d6538e42079c13adb5df5a39aa82e639.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_10.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_10.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/92548413ffe4a31d104639fb0254d3bf.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Anonymous_200626_Validated Design_Page_11.jpg":
+/*!********************************************************************!*\
+  !*** ./assets/Links/Anonymous_200626_Validated Design_Page_11.jpg ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c3d787e50979dc862ed141c4e0694d8c.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock1.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock1.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d78a224c651eeedbe79fb647c41212d8.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock2.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock2.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9159ecdc6a718d2ac1c26268b066ce59.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock3.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock3.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b221ec7ff4dd30e446b8d96f8677c551.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock4.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock4.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/58f19b57a090c57b36a99eac1081423d.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock5.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock5.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3818034eafdbd331207cfb8fd9d7b0fd.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock6.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock6.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1d5de4160df92a24bfaf6f5ce0620f99.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock7.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock7.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ef6b41a018a39f8b8a0ae8e5c1c0a927.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/Dazedmock8.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/Dazedmock8.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/0114b34573f064ad03807cb19335d50c.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA (3)_R1_QC_RGB_300dpi copy.jpg":
+/*!********************************************************!*\
+  !*** ./assets/Links/HBA (3)_R1_QC_RGB_300dpi copy.jpg ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1dc6e26582358d50558a851c36b942b5.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA (4)_R2_QC_RGB_300dpi copy.jpg":
+/*!********************************************************!*\
+  !*** ./assets/Links/HBA (4)_R2_QC_RGB_300dpi copy.jpg ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/45204d2fd0edb9e2afbc0b80e9adf4bd.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA Polas_032 copy.jpg":
+/*!*********************************************!*\
+  !*** ./assets/Links/HBA Polas_032 copy.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e770ba8941b42e3c422bc88747843b7e.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA Polas_18 copy.jpg":
+/*!********************************************!*\
+  !*** ./assets/Links/HBA Polas_18 copy.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7ab6256ec44657f10c5dcdb5eb9fc5a3.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_015 copy.jpg":
+/*!***************************************!*\
+  !*** ./assets/Links/HBA_015 copy.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/163e22d2191719bcfbb3adb22032f6f5.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_017 copy.jpg":
+/*!***************************************!*\
+  !*** ./assets/Links/HBA_017 copy.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b821da1366b5e3db68200839f481778e.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_03 copy.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/HBA_03 copy.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d151d84ccf32f7dff99d2eed15cbdaf7.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg":
+/*!*******************************************************!*\
+  !*** ./assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cf55776c5a4b09acaa00999c81f8dfee.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_04_R2_QC_RGB_300dpi copy.jpg":
+/*!*******************************************************!*\
+  !*** ./assets/Links/HBA_04_R2_QC_RGB_300dpi copy.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d98ebd36aaf431683657d52cff712e5b.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_07 copy.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/HBA_07 copy.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2777f17200757104b66a23689c3cff72.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/HBA_R1_QC_RGB_300dpi copy.jpg":
+/*!****************************************************!*\
+  !*** ./assets/Links/HBA_R1_QC_RGB_300dpi copy.jpg ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/bdb40c6299765938fb8ebbe06976100d.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/JULY 29 3 FINAL .jpg":
+/*!*******************************************!*\
+  !*** ./assets/Links/JULY 29 3 FINAL .jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4ca7d2bc727f9b4bfc0ea858fceb3d66.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/_DSC4291.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/_DSC4291.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9cdf51fd6b94b3f9e43921e85ee322ac.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/_DSC4457-Edit.jpg":
+/*!****************************************!*\
+  !*** ./assets/Links/_DSC4457-Edit.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/5553e45684f8dec2cce7c77a5bc7080e.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/_DSC4469.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/_DSC4469.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/bc9a1c672e35a239f12174ef7d5e7442.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/_DSC4470.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/_DSC4470.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cf1efdeae432680ba9aa2b71dcf3d3bc.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anon 3 yves deli.jpg":
+/*!*******************************************!*\
+  !*** ./assets/Links/anon 3 yves deli.jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1c28e52e87e2479cfe5b8107830e90a3.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anon august 26.jpg":
+/*!*****************************************!*\
+  !*** ./assets/Links/anon august 26.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/fce73770a00225b648c7d0d2ca15dd8d.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 4.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/anonymous 4.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a06362c8f5bbbeebfa9c203b4f8af753.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 5.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/anonymous 5.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/0145f3a391f7b440262177dc318d2086.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 6.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/anonymous 6.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/17b6b551677b97ab086ac12ea5b491ff.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 7 copy.jpg":
+/*!*******************************************!*\
+  !*** ./assets/Links/anonymous 7 copy.jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7a8b1b3cacb61fe1ad7889558be6bc46.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 8.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/anonymous 8.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/420c41be7666d30b33282cb4e0bd9086.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous 9.jpg":
+/*!**************************************!*\
+  !*** ./assets/Links/anonymous 9.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9598bf769ec3be92abeee79a75dad221.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous1.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/anonymous1.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/314cfce29b384a70eacc028da9a34f5e.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/anonymous3.jpg":
+/*!*************************************!*\
+  !*** ./assets/Links/anonymous3.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f34f6b9bd9a72f60e469566c279bfaf9.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/cuzzibay.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/cuzzibay.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/066590627424b762d78fbc78a20aa018.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/headache redu.jpg":
+/*!****************************************!*\
+  !*** ./assets/Links/headache redu.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2a5bed65a631728ea5436c0376ed23f2.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 13.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 13.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ea5524aea5196bad20a5062711203dc1.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 14.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 14.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6712a05775e053b9ab794b914fc78625.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 15.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 15.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/26787d517d55f4d25625e6069c3c801c.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 16.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 16.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/122dfe0d3b4823ed6d210bb0a4fa77e1.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 17.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 17.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/52230f48127866aefaea4e736392166d.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 18.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 18.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/57c8de86cbe0ad7742f620f9609917b8.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 19.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 19.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e757556b2f767e5b09fcbc3b45bfde46.jpg";
+
+/***/ }),
+
+/***/ "./assets/Links/still 20.jpg":
+/*!***********************************!*\
+  !*** ./assets/Links/still 20.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/0cd59060917c7c997f90d57d7f2c5342.jpg";
+
+/***/ }),
+
 /***/ "./main.tsx":
 /*!******************!*\
   !*** ./main.tsx ***!
@@ -3816,8 +4569,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "../../../node_modules/@react-three/drei/index.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/210611/ANO_CHI_01_HIRES.glb */ "./assets/210611/ANO_CHI_01_HIRES.glb");
+/* harmony import */ var _assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
 
 const _excluded = ["children"];
@@ -3826,6 +4581,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/model
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -3840,12 +4596,12 @@ function Model(props) {
   const {
     nodes,
     materials
-  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('assets/210611/ANO_CHI_01_HIRES.glb');
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("group", _objectSpread(_objectSpread({
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("group", _objectSpread(_objectSpread({
     ref: group
   }, groupProps), {}, {
     dispose: null,
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("mesh", {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("mesh", {
       castShadow: true,
       receiveShadow: true,
       geometry: nodes.CHI_HIRES.geometry,
@@ -3861,7 +4617,7 @@ function Model(props) {
     columnNumber: 5
   }, this);
 }
-_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('assets/210611/ANO_CHI_01_HIRES.glb');
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
 
 /***/ }),
 
@@ -3880,8 +4636,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "../../../node_modules/@react-three/drei/index.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
-/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_210611_ANO_LOGO_01_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/210611/ANO_LOGO_01.glb */ "./assets/210611/ANO_LOGO_01.glb");
+/* harmony import */ var _assets_210611_ANO_LOGO_01_glb__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_210611_ANO_LOGO_01_glb__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
 
 const _excluded = ["children", "onLoad"];
@@ -3890,6 +4648,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/model
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -3909,12 +4668,12 @@ function Model(props) {
   const {
     nodes,
     materials
-  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('assets/210611/ANO_LOGO_01.glb');
-  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("group", _objectSpread(_objectSpread({
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])(_assets_210611_ANO_LOGO_01_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("group", _objectSpread(_objectSpread({
     ref: group
   }, groupProps), {}, {
     dispose: null,
-    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("mesh", {
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("mesh", {
       castShadow: true,
       receiveShadow: true,
       geometry: nodes.ANONYMOUS_LOGO_01.geometry // position={[8.82, -8.84, 0]}
@@ -3932,7 +4691,81 @@ function Model(props) {
     columnNumber: 5
   }, this);
 }
-_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('assets/210611/ANO_LOGO_01.glb');
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload(_assets_210611_ANO_LOGO_01_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+
+/***/ }),
+
+/***/ "./models/ANO_LOGO_02.tsx":
+/*!********************************!*\
+  !*** ./models/ANO_LOGO_02.tsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Model; });
+/* harmony import */ var _Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! /Users/coryhall/Code/FL/anonymous.club/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! /Users/coryhall/Code/FL/anonymous.club/node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties */ "../../../node_modules/@nrwl/web/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "../../../node_modules/@react-three/drei/index.js");
+/* harmony import */ var _assets_210611_ANO_LOGO_02_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/210611/ANO_LOGO_02.glb */ "./assets/210611/ANO_LOGO_02.glb");
+/* harmony import */ var _assets_210611_ANO_LOGO_02_glb__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_210611_ANO_LOGO_02_glb__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
+/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
+
+const _excluded = ["children", "onLoad"];
+var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/models/ANO_LOGO_02.tsx";
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
+function Model(props) {
+  const {
+    children,
+    onLoad
+  } = props,
+        groupProps = Object(_Users_coryhall_Code_FL_anonymous_club_node_modules_nrwl_web_node_modules_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
+
+  const group = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    if (!onLoad || !group.current) return;
+    onLoad(group.current);
+  }, [group, onLoad]);
+  const {
+    nodes,
+    materials
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])(_assets_210611_ANO_LOGO_02_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+  return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("group", _objectSpread(_objectSpread({
+    ref: group
+  }, groupProps), {}, {
+    dispose: null,
+    children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("mesh", {
+      castShadow: true,
+      receiveShadow: true,
+      geometry: nodes.ANONYMOUS_LOGO_02.geometry // position={[8.82, -8.84, 0]}
+      // onAfterRender={(_w, _s, _p, ge) => console.log(args)}
+      ,
+      children: children
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 7
+    }, this)
+  }), void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 27,
+    columnNumber: 5
+  }, this);
+}
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload(_assets_210611_ANO_LOGO_02_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
 
 /***/ }),
 
