@@ -3411,7 +3411,7 @@ function App() {
           lineNumber: 105,
           columnNumber: 11
         }, this), hideBG || /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_13__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_4__["Globe"], {
-          imgs: ['assets/Links/_DSC4457-Edit.jpg']
+          imgs: ['assets/Links/HBA_03_R2_QC_RGB_300dpi copy.jpg']
         }, void 0, false, {
           fileName: _jsxFileName,
           lineNumber: 106,
