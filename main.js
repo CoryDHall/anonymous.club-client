@@ -160,7 +160,7 @@ function GlobeItem({
       fog: false // bumpScale={1}
       ,
       map: tMap,
-      shininess: 0,
+      shininess: 0.9,
       side: three__WEBPACK_IMPORTED_MODULE_6__["DoubleSide"],
       children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("canvasTexture", {
         attachObject: ["attributes", "map"],
@@ -871,7 +871,12 @@ function StaticLight({
     // }
 
     ref.current.shadow.camera.rotation.copy(camera.rotation);
-    ref.current.shadow.camera.layers.set(0); // if (typeof 'red' !== 'undefined') {
+    ref.current.shadow.camera.layers.set(0); // ref.current.shadow.camera.layers.set(2);
+    // ref.current.shadow.camera.layers.enableAll();
+    // ref.current.layers.set(0);
+    // ref.current.layers.set(2);
+    // ref.current.layers.enableAll();
+    // if (typeof 'red' !== 'undefined') {
     // }
     // const {drawingBufferHeight} = gl.getContext();
 
@@ -905,7 +910,7 @@ function StaticLight({
     "shadow-mapSize": [2048, 2048]
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 49,
+    lineNumber: 54,
     columnNumber: 5
   }, this);
 }
@@ -922,7 +927,7 @@ function WorldLights({
       intensity: 0.01
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 74,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_CirculatingLight__WEBPACK_IMPORTED_MODULE_2__["CirculatingLight"], {
       axis: [.1, .1, 1],
@@ -939,19 +944,19 @@ function WorldLights({
       "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_3__["SHADOW_SCALE"]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 79,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(_CirculatingLight__WEBPACK_IMPORTED_MODULE_2__["CirculatingLight"], {
       axis: [2, 0.2, 1],
       center: [0, 10, 40],
       color: 0xfdfffc,
-      decay: 30,
-      distance: 0,
-      freq: 0.5,
-      intensity: 4.5,
-      layers: 1,
+      decay: 30 // distance={0}
+      ,
+      freq: 0.35,
+      intensity: 0.25,
+      layers: 0,
       offset: 3.14,
-      radius: 400,
+      radius: 300,
       "shadow-bias": -0.0004,
       "shadow-camera-far": 10000,
       "shadow-mapSize-height": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_3__["SHADOW_SCALE"],
@@ -959,7 +964,7 @@ function WorldLights({
 
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 93,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("spotLight", {
       castShadow: true,
@@ -972,13 +977,13 @@ function WorldLights({
       "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_3__["SHADOW_SCALE"]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 110,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])(StaticLight, {
       shouldShowBottom: shouldShowBottom
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 115,
+      lineNumber: 120,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_8__["jsxDEV"])("spotLight", {
       castShadow: true,
@@ -992,7 +997,7 @@ function WorldLights({
       "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_3__["SHADOW_SCALE"]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 116,
+      lineNumber: 121,
       columnNumber: 7
     }, this)]
   }, void 0, true);
@@ -2937,7 +2942,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "../../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".App_app__2Lcw_ {\n  position: absolute;\n  inset: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.0625em;\n  font-size: 14px;\n}\n.App_app__2Lcw_ input {\n  font-size: 16px;\n  background: none;\n  color: white;\n  padding: 2px;\n  margin: 0px 2px;\n}", ""]);
+exports.push([module.i, ".App_app__2Lcw_ {\n  position: absolute;\n  inset: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.0625em;\n}\n.App_app__2Lcw_ input {\n  font-size: 16px;\n  background: none;\n  color: white;\n  padding: 2px;\n  margin: 0px 2px;\n}", ""]);
 // Exports
 exports.locals = {
 	"app": "App_app__2Lcw_"
@@ -2958,7 +2963,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "../../../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".BioText_bio-text__11Ag1 {\n  text-align: center;\n}\n.BioText_bio-text__child__UFdZw {\n  position: absolute;\n  bottom: 0;\n  inset-inline: 0;\n  z-index: 9;\n}\n.BioText_bio-text__child__UFdZw.BioText_open__oSwLT {\n  min-height: fit-content;\n}\n.BioText_bio-text__child__UFdZw figcaption {\n  color: white;\n  position: relative;\n  max-width: 1024px;\n  width: 90%;\n  padding: 32px;\n  margin: 4px auto;\n  mix-blend-mode: difference;\n}\n.BioText_bio-text__child__UFdZw::before {\n  content: \"\";\n  position: fixed;\n  inset: 0;\n  display: block;\n  transition: top 200ms;\n  background: radial-gradient(ellipse 90vh 100vh at top center, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0) 60vh, rgba(0, 0, 0, 0.75) 85vh);\n}\n.BioText_bio-text__child__UFdZw.BioText_closed__2Dnga::before {\n  top: 100%;\n}", ""]);
+exports.push([module.i, ".BioText_bio-text__11Ag1 {\n  text-align: center;\n}\n.BioText_bio-text__child__UFdZw {\n  position: absolute;\n  bottom: 0;\n  inset-inline: 0;\n  z-index: 9;\n}\n.BioText_bio-text__child__UFdZw.BioText_open__oSwLT {\n  min-height: fit-content;\n}\n.BioText_bio-text__child__UFdZw figcaption {\n  color: white;\n  position: relative;\n  max-width: 1024px;\n  width: 90%;\n  padding: 32px;\n  margin: 4px auto;\n  mix-blend-mode: difference;\n  font-size: 1rem;\n}\n.BioText_bio-text__child__UFdZw::before {\n  content: \"\";\n  position: fixed;\n  inset: 0;\n  display: block;\n  transition: top 200ms;\n  background: radial-gradient(ellipse 90vh 100vh at top center, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0) 60vh, rgba(0, 0, 0, 0.75) 85vh);\n}\n.BioText_bio-text__child__UFdZw.BioText_closed__2Dnga::before {\n  top: 100%;\n}", ""]);
 // Exports
 exports.locals = {
 	"bio-text": "BioText_bio-text__11Ag1",
@@ -4552,7 +4557,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"9c3ba1bccb76496de2e6a213c3c709dc0160f8e8405671913b7a6feadcceddb0","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/9c3ba1bccb76496de2e6a213c3c709dc0160f8e8405671913b7a6feadcceddb0","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"200b85748b0ebf11c1e6652e20f21483a5e660573d231bd04b317d4b0203213d","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/200b85748b0ebf11c1e6652e20f21483a5e660573d231bd04b317d4b0203213d","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
