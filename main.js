@@ -3840,7 +3840,7 @@ function Model(props) {
   const {
     nodes,
     materials
-  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('/../assets/210611/ANO_CHI_01_HIRES.glb');
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('/assets/210611/ANO_CHI_01_HIRES.glb');
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("group", _objectSpread(_objectSpread({
     ref: group
   }, groupProps), {}, {
@@ -3861,7 +3861,7 @@ function Model(props) {
     columnNumber: 5
   }, this);
 }
-_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('/../assets/210611/ANO_CHI_01_HIRES.glb');
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('/assets/210611/ANO_CHI_01_HIRES.glb');
 
 /***/ }),
 
@@ -3909,7 +3909,7 @@ function Model(props) {
   const {
     nodes,
     materials
-  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('/../assets/210611/ANO_LOGO_01.glb');
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])('/assets/210611/ANO_LOGO_01.glb');
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("group", _objectSpread(_objectSpread({
     ref: group
   }, groupProps), {}, {
@@ -3932,7 +3932,7 @@ function Model(props) {
     columnNumber: 5
   }, this);
 }
-_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('/../assets/210611/ANO_LOGO_01.glb');
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload('/assets/210611/ANO_LOGO_01.glb');
 
 /***/ }),
 
