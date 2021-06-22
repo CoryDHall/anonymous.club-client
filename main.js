@@ -3462,10 +3462,11 @@ const LINKS = [{
 }, {
   href: '/cv',
   copy: 'CV'
-}, {
-  href: '/bio',
-  copy: 'Bio'
-}, {
+}, // {
+//   href: '/bio',
+//   copy: 'Bio'
+// },
+{
   href: '/hba',
   copy: 'HBA x Anonymous'
 }];
@@ -3885,17 +3886,6 @@ const useWorldStore = Object(zustand__WEBPACK_IMPORTED_MODULE_1__["default"])((s
 
 /***/ }),
 
-/***/ "./assets/210611/ANO_CHI_01_HIRES.glb":
-/*!********************************************!*\
-  !*** ./assets/210611/ANO_CHI_01_HIRES.glb ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "assets/models/cdab4f336d4b7b0f9592a0e65db064d2.glb";
-
-/***/ }),
-
 /***/ "./assets/210611/ANO_LOGO_01.glb":
 /*!***************************************!*\
   !*** ./assets/210611/ANO_LOGO_01.glb ***!
@@ -3915,6 +3905,17 @@ module.exports = __webpack_require__.p + "assets/models/a00fe93a812bb87d40470aee
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/models/d79739650452b84d130805cab95f3395.glb";
+
+/***/ }),
+
+/***/ "./assets/210618/ANO_CHI_01_HIRES.glb":
+/*!********************************************!*\
+  !*** ./assets/210618/ANO_CHI_01_HIRES.glb ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/models/d9618422c5d13baba8e389797a88740a.glb";
 
 /***/ }),
 
@@ -4557,7 +4558,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"200b85748b0ebf11c1e6652e20f21483a5e660573d231bd04b317d4b0203213d","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/200b85748b0ebf11c1e6652e20f21483a5e660573d231bd04b317d4b0203213d","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"49e49359fa0a7fd0491d51acd65be783ba77656a590b999b469a9bf79340a365","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/49e49359fa0a7fd0491d51acd65be783ba77656a590b999b469a9bf79340a365","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
@@ -4593,8 +4594,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "../../../node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _react_three_drei__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-three/drei */ "../../../node_modules/@react-three/drei/index.js");
-/* harmony import */ var _assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/210611/ANO_CHI_01_HIRES.glb */ "./assets/210611/ANO_CHI_01_HIRES.glb");
-/* harmony import */ var _assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_210618_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/210618/ANO_CHI_01_HIRES.glb */ "./assets/210618/ANO_CHI_01_HIRES.glb");
+/* harmony import */ var _assets_210618_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_210618_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../node_modules/react/jsx-dev-runtime.js");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);
 
@@ -4620,7 +4621,7 @@ function Model(props) {
   const {
     nodes,
     materials
-  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+  } = Object(_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"])(_assets_210618_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxDEV"])("group", _objectSpread(_objectSpread({
     ref: group
   }, groupProps), {}, {
@@ -4641,7 +4642,7 @@ function Model(props) {
     columnNumber: 5
   }, this);
 }
-_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload(_assets_210611_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
+_react_three_drei__WEBPACK_IMPORTED_MODULE_3__["useGLTF"].preload(_assets_210618_ANO_CHI_01_HIRES_glb__WEBPACK_IMPORTED_MODULE_4___default.a);
 
 /***/ }),
 
