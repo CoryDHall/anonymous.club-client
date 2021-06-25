@@ -4056,9 +4056,9 @@ function App() {
         columnNumber: 21
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_react_three_drei__WEBPACK_IMPORTED_MODULE_10__["CubeCamera"], {
         far: -1,
-        resolution: 256,
-        scale: 0.5,
-        children: texture => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(CurrentFigure, {
+        resolution: 256 // scale={0.5}
+        ,
+        children: Object(react__WEBPACK_IMPORTED_MODULE_2__["useCallback"])(texture => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(CurrentFigure, {
           children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["materials"].ClearOnHoverMaterial, {
             useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_5__["useWorldStore"],
             // flatShading
@@ -4107,7 +4107,7 @@ function App() {
           fileName: _jsxFileName,
           lineNumber: 137,
           columnNumber: 13
-        }, this)
+        }, this), [CurrentFigure])
       }, void 0, false, {
         fileName: _jsxFileName,
         lineNumber: 131,
@@ -5130,7 +5130,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"850fca2d73d0f65dd3d238266d97540dad2c7dfdc9479549e09aadb25f1db8e1","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/850fca2d73d0f65dd3d238266d97540dad2c7dfdc9479549e09aadb25f1db8e1","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"2a0562e2ac438acdc71e517e4f8e38bfb81c46fa3face477bf9e781f7762120a","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/2a0562e2ac438acdc71e517e4f8e38bfb81c46fa3face477bf9e781f7762120a","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
