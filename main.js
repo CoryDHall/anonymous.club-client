@@ -223,7 +223,6 @@ function GlobeItem(props) {
     var _geometry$boundingSph;
 
     const position = geometry.getAttribute('position');
-    if (!geometry.morphAttributes.position) geometry.morphAttributes.position = [];
     geometry.computeBoundingBox();
     (_geometry$boundingSph = geometry.boundingSphere) !== null && _geometry$boundingSph !== void 0 ? _geometry$boundingSph : geometry.computeBoundingSphere();
     const box = geometry.boundingBox;
@@ -248,6 +247,7 @@ function GlobeItem(props) {
       vertex.set(x, y, z).toArray(planar, planar.length);
     }
 
+    if (!geometry.morphAttributes.position) geometry.morphAttributes.position = [];
     geometry.morphAttributes.position[0] = new three__WEBPACK_IMPORTED_MODULE_4__["Float32BufferAttribute"](planar, 3);
     console.log(geometry, plane, phiEnd, phiStart);
     l2.dispose();
@@ -277,6 +277,7 @@ function GlobeItem(props) {
   // }, [lref], [lref.current]);
   // useHelper(mRef, VertexNormalsHelper, 100);
 
+  const mti = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(() => [], []);
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_5__["animated"].group, {
     castShadow: true,
     receiveShadow: true,
@@ -297,9 +298,9 @@ function GlobeItem(props) {
       // lookAt={posCenter}
       // quaternion-y={0}
       // quaternion-z={0}
-      // morphTargetInfluences={[pos]}
-      // morphTargetInfluences-0={pos}
       ,
+      morphTargetInfluences: mti,
+      "morphTargetInfluences-0": mH,
       "position-z": rZ,
       ref: mRef,
       "rotation-order": "ZXY",
@@ -312,24 +313,24 @@ function GlobeItem(props) {
         ref: lref
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 250,
+        lineNumber: 251,
         columnNumber: 9
       }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxDEV"])(_ImageMaterial__WEBPACK_IMPORTED_MODULE_8__["ImageMaterial"], {
         src: src,
         onLoad: afterImageLoads
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 263,
+        lineNumber: 264,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 231,
       columnNumber: 7
     }, this)
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 217,
+    lineNumber: 218,
     columnNumber: 5
   }, this);
 }
@@ -974,7 +975,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world
 
 function EnvironmentEffects() {
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["EffectComposer"], {
-    multisampling: 2,
+    multisampling: 0,
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["ChromaticAberration"], {
       blendFunction: postprocessing__WEBPACK_IMPORTED_MODULE_1__["BlendFunction"].NORMAL
     }, void 0, false, {
@@ -1496,7 +1497,7 @@ function WorldLights({
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("hemisphereLight", {
       // color="white"
       // groundColor="lightblue"
-      intensity: 0.04
+      intensity: 0.2
     }, void 0, false, {
       fileName: _jsxFileName,
       lineNumber: 13,
@@ -1504,12 +1505,12 @@ function WorldLights({
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_CirculatingLight__WEBPACK_IMPORTED_MODULE_0__["CirculatingLight"], {
       axis: [1, 2, 0],
       center: [0, 10, 40],
-      color: 0xfbfffc,
+      color: 0xfbfffc - 0x888888,
       decay: 30 // color={0xff0000}
       // distance={1 / 1000}
       ,
       freq: 0.35,
-      intensity: 4,
+      intensity: 2,
       layers: 0,
       offset: 3.14,
       radius: buffer.diag,
@@ -3894,9 +3895,9 @@ function WorldBackDrop() {
   const ref = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
   const buffer = Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["useBufferHeight"])();
   const points = Object(react__WEBPACK_IMPORTED_MODULE_2__["useMemo"])(() => {
-    const bigR = buffer.max;
+    const bigR = buffer.diag;
     return new three__WEBPACK_IMPORTED_MODULE_3__["EllipseCurve"](1, 0, bigR, bigR, 0.5 * Math.PI, 1.5 * Math.PI, true, 0).getSpacedPoints(64);
-  }, [buffer.max]);
+  }, [buffer.diag]);
   Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["useRefFrame"])(([mesh], [{
     camera
   }]) => {
@@ -3923,8 +3924,8 @@ function WorldBackDrop() {
       ,
       depthTest: false,
       fog: false,
-      metalness: 0.5 // roughness={0.99}
-      // side={DoubleSide}
+      metalness: 0.05,
+      roughness: 0 // side={DoubleSide}
 
     }, void 0, false, {
       fileName: _jsxFileName,
@@ -5128,7 +5129,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"492213ff27949662205e227801c33cde5e6357c6ffdbd6c8be27ed3fb3a9b679","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/492213ff27949662205e227801c33cde5e6357c6ffdbd6c8be27ed3fb3a9b679","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"20f1dfe4c10802299a19fd190ccf6843c33a01c1a45c1d42e1237c9ca7911a70","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/20f1dfe4c10802299a19fd190ccf6843c33a01c1a45c1d42e1237c9ca7911a70","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
