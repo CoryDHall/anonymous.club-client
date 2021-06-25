@@ -4069,10 +4069,11 @@ function App() {
             ,
             clearcoat: 1,
             clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
-            // color={0xffffff - 0xebf8fb}
-            // ior={1.0}
             ,
-            color: 0xebf8fb // depthTest={false}
+            color: 0xffffff - 0xebf8fb // ior={1.0}
+            // color={0xebf8fb}
+            // color={0x000000}
+            // depthTest={false}
             ,
             envMap: texture,
             envMapIntensity: 2,
@@ -4082,12 +4083,12 @@ function App() {
             ,
             roughness: 0.07062005,
             children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
-              args: [0x010f0f] // args={[0x010000]}
-              ,
+              // args={[0x010f0f]}
+              args: [0x010000],
               attach: "emissive"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 163,
+              lineNumber: 164,
               columnNumber: 17
             }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
               args: [0xeeefdd] // args={[0x010000]}
@@ -4095,7 +4096,7 @@ function App() {
               attach: "sheen"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 168,
+              lineNumber: 169,
               columnNumber: 17
             }, this)]
           }, void 0, true, {
@@ -4112,21 +4113,6 @@ function App() {
         fileName: _jsxFileName,
         lineNumber: 131,
         columnNumber: 9
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_react_three_drei__WEBPACK_IMPORTED_MODULE_10__["ContactShadows"], {
-        blur: 0,
-        far: 1000,
-        height: 1000,
-        opacity: 1,
-        position: [0, 0, -10],
-        resolution: 256 // rotation={[Math.PI / 2, 0, 0]}
-        ,
-        rotation: [0, 0, Math.PI / 2] // rotation={[0, Math.PI / 2, 0]}
-        ,
-        width: 1000
-      }, void 0, false, {
-        fileName: _jsxFileName,
-        lineNumber: 182,
-        columnNumber: 9
       }, this)]
     }, void 0, true, {
       fileName: _jsxFileName,
@@ -4136,7 +4122,7 @@ function App() {
       useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_5__["useWorldStore"]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 196,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
@@ -5130,7 +5116,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"2a0562e2ac438acdc71e517e4f8e38bfb81c46fa3face477bf9e781f7762120a","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/2a0562e2ac438acdc71e517e4f8e38bfb81c46fa3face477bf9e781f7762120a","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"b62c9f0b42cef2c9821e0f3cb4d24c7b65c39aec86ee526a62fcda7e3d832b02","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/b62c9f0b42cef2c9821e0f3cb4d24c7b65c39aec86ee526a62fcda7e3d832b02","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
