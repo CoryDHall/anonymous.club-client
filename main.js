@@ -248,8 +248,8 @@ function GlobeItem(props) {
     }
 
     if (!geometry.morphAttributes.position) geometry.morphAttributes.position = [];
-    geometry.morphAttributes.position[0] = new three__WEBPACK_IMPORTED_MODULE_4__["Float32BufferAttribute"](planar, 3);
-    console.log(geometry, plane, phiEnd, phiStart);
+    geometry.morphAttributes.position[0] = new three__WEBPACK_IMPORTED_MODULE_4__["Float32BufferAttribute"](planar, 3); // console.log(geometry, plane, phiEnd, phiStart);
+
     l2.dispose();
   }, [lref], [lref.current, pX]); // useRefEffect(([geometry]) => {
   //   const position = geometry.getAttribute('position');
@@ -1420,9 +1420,10 @@ function WorldEnvironment({
   // const shouldStop = useWorldStore(state => state.isHeroHovered);
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_react_three_fiber__WEBPACK_IMPORTED_MODULE_4__["Canvas"] // orthographic
   // camera={{ fov: 45, far: 10000 }}
+  // camera={{ fov: 22.5, far: -1 }}
   , {
     camera: {
-      fov: 22.5,
+      fov: 45,
       far: -1
     },
     gl: {
@@ -1433,7 +1434,7 @@ function WorldEnvironment({
     },
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_InternalCamera__WEBPACK_IMPORTED_MODULE_10__["InternalCamera"], {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 83,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
       args: [0xffffff - 0x010100] // args={[0x010100]}
@@ -1441,17 +1442,17 @@ function WorldEnvironment({
       attach: "background"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 84,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_WorldLights__WEBPACK_IMPORTED_MODULE_9__["WorldLights"], {
       useWorldStore
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 7
     }, this), children, /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_EnvironmentEffects__WEBPACK_IMPORTED_MODULE_8__["EnvironmentEffects"], {}, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 90,
+      lineNumber: 91,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
@@ -3895,7 +3896,7 @@ function WorldBackDrop() {
   const ref = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
   const buffer = Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["useBufferHeight"])();
   const points = Object(react__WEBPACK_IMPORTED_MODULE_2__["useMemo"])(() => {
-    const bigR = buffer.diag;
+    const bigR = buffer.diag * 2;
     return new three__WEBPACK_IMPORTED_MODULE_3__["EllipseCurve"](1, 0, bigR, bigR, 0.5 * Math.PI, 1.5 * Math.PI, true, 0).getSpacedPoints(64);
   }, [buffer.diag]);
   Object(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["useRefFrame"])(([mesh], [{
@@ -3954,8 +3955,8 @@ const circleSlice = (arr, count) => idx => {
 
 function App() {
   const [img, setImg] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(27);
-  const [iCount, setICount] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(24);
-  const [colMax, setColMax] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(8);
+  const [iCount, setICount] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(48);
+  const [colMax, setColMax] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(12);
   const [mod, setMod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(2);
   const imgCircle = Object(react__WEBPACK_IMPORTED_MODULE_2__["useMemo"])(() => circleSlice(_IMGS__WEBPACK_IMPORTED_MODULE_8__["default"], iCount), [iCount]);
   const CurrentFigure = _MODELS__WEBPACK_IMPORTED_MODULE_4__["MODELS"][mod];
@@ -5129,7 +5130,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"20f1dfe4c10802299a19fd190ccf6843c33a01c1a45c1d42e1237c9ca7911a70","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/20f1dfe4c10802299a19fd190ccf6843c33a01c1a45c1d42e1237c9ca7911a70","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"850fca2d73d0f65dd3d238266d97540dad2c7dfdc9479549e09aadb25f1db8e1","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/850fca2d73d0f65dd3d238266d97540dad2c7dfdc9479549e09aadb25f1db8e1","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
