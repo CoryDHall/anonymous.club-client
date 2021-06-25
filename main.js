@@ -544,8 +544,7 @@ const asHeroFigurine = (Component, useStore) => {
       clock,
       camera
     }]) => {
-      rY.start(Math.atan(clock.getElapsedTime() * 0.1) * 0.0025);
-      g.rotation.y += rY.get();
+      rY.set(clock.getElapsedTime() * 0.5 % (Math.PI * 2));
       m.scale.setScalar((_world_environment_INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_8__["INITIAL_CAMERA_POSITION_LENGTH"] / camera.position.length()) ** -1);
     }, [groupRef, modelRef]);
     return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxDEV"])("group", {
@@ -554,8 +553,7 @@ const asHeroFigurine = (Component, useStore) => {
         fallback: null,
         children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_10__["jsxDEV"])(_react_spring_three__WEBPACK_IMPORTED_MODULE_7__["animated"].group, {
           ref: groupRef,
-          rotation: [0, 0, 0] // rotation-y={rY.get()}
-          ,
+          "rotation-y": rY,
           onPointerOver: () => onHeroHover({
             down: true
           }),
@@ -566,22 +564,22 @@ const asHeroFigurine = (Component, useStore) => {
             onLoad
           }), void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 55,
+            lineNumber: 53,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 45,
           columnNumber: 11
         }, undefined)
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 44,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 7
     }, undefined);
   };
@@ -930,7 +928,7 @@ function CirculatingLight(_ref) {
 
     const r = sR.get();
     const t = offset + tD * freq;
-    api.start({
+    api.set({
       z: cZ + Math.sin(t) * r * aZ,
       x: cX + Math.cos(t) * r * aX,
       y: cY + Math.sin(t) * r * aY
@@ -976,7 +974,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/libs/ui/src/lib/world
 
 function EnvironmentEffects() {
   return /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["EffectComposer"], {
-    multisampling: 0,
+    multisampling: 2,
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])(_react_three_postprocessing__WEBPACK_IMPORTED_MODULE_0__["ChromaticAberration"], {
       blendFunction: postprocessing__WEBPACK_IMPORTED_MODULE_1__["BlendFunction"].NORMAL
     }, void 0, false, {
@@ -1082,7 +1080,7 @@ function InternalCamera() {
   }, [camera]);
   Object(_utils_useRefEffect__WEBPACK_IMPORTED_MODULE_4__["useRefEffect"])(([controlsRef]) => {
     controlsRef.target.set(0, 0, 0);
-    controlsRef.maxDistance = Math.min(_INITIAL_CAMERA_POSITION__WEBPACK_IMPORTED_MODULE_6__["MAX_CAMERA_DISTANCE"], buffer.diag * 4);
+    controlsRef.maxDistance = buffer.diag * 2.4 - 5;
     controlsRef.minDistance = 1;
     controlsRef.enablePan = false; // controlsRef.maxAzimuthAngle = 0.125 * Math.PI;
     // controlsRef.minAzimuthAngle = -0.125 * Math.PI;
@@ -1139,7 +1137,7 @@ function InternalCamera() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHADOW_SCALE", function() { return SHADOW_SCALE; });
-const SHADOW_SCALE = 512;
+const SHADOW_SCALE = 256;
 
 /***/ }),
 
@@ -1498,40 +1496,24 @@ function WorldLights({
     children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("hemisphereLight", {
       // color="white"
       // groundColor="lightblue"
-      intensity: 0.05
+      intensity: 0.04
     }, void 0, false, {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_CirculatingLight__WEBPACK_IMPORTED_MODULE_0__["CirculatingLight"], {
-      axis: [.1, .1, 1],
-      center: [140, -40, -100] // color="gold"
-      ,
-      decay: 2,
-      freq: 0.22,
-      intensity: 1,
-      layers: 1 // shadow-bias={-0.00002}
-      ,
-      radius: 60,
-      "shadow-camera-far": -1,
-      "shadow-mapSize-height": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"],
-      "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"]
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_CirculatingLight__WEBPACK_IMPORTED_MODULE_0__["CirculatingLight"], {
-      axis: [2, 0.2, 1],
+      axis: [1, 2, 0],
       center: [0, 10, 40],
-      color: 0xfdfffc // color={0xff0000}
+      color: 0xfbfffc,
+      decay: 30 // color={0xff0000}
+      // distance={1 / 1000}
       ,
-      decay: 30,
-      distance: 0,
       freq: 0.35,
-      intensity: 2,
+      intensity: 4,
       layers: 0,
       offset: 3.14,
-      radius: buffer.diag / 2,
+      radius: buffer.diag,
+      "rotation-z": Math.PI,
       "shadow-bias": -0.0004,
       "shadow-camera-far": -1,
       "shadow-mapSize-height": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"],
@@ -1541,40 +1523,13 @@ function WorldLights({
       fileName: _jsxFileName,
       lineNumber: 32,
       columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("spotLight", {
-      castShadow: true,
-      angle: 1.0,
-      intensity: 0.5,
-      layers: 1,
-      position: [100, 200, 300],
-      "shadow-bias": -0.00002,
-      "shadow-mapSize-height": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"],
-      "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"]
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 7
     }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_StaticLight__WEBPACK_IMPORTED_MODULE_2__["StaticLight"] // color={'hotpink'}
     // depthBuffer={depthRef}
     , {
       shouldShowBottom: shouldShowBottom
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 7
-    }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])("spotLight", {
-      castShadow: true,
-      angle: 1.0,
-      decay: 0,
-      intensity: 0.5,
-      layers: 1,
-      position: [-100, 200, 300],
-      "shadow-bias": -0.00002,
-      "shadow-mapSize-height": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"],
-      "shadow-mapSize-width": _SHADOW_SCALE__WEBPACK_IMPORTED_MODULE_1__["SHADOW_SCALE"]
-    }, void 0, false, {
-      fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 61,
       columnNumber: 7
     }, this)]
   }, void 0, true);
@@ -4097,53 +4052,59 @@ function App() {
         fileName: _jsxFileName,
         lineNumber: 127,
         columnNumber: 21
-      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(CurrentFigure // Model={ANO_CHI_01_HIRES}
-      // position={[0, 20, -600]}
-      // layers={1}
-      // scale={1.0}
-      , {
+      }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_react_three_drei__WEBPACK_IMPORTED_MODULE_10__["CubeCamera"], {
+        far: -1,
+        resolution: 256,
         scale: 0.5,
-        children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["materials"].ClearOnHoverMaterial, {
-          useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_5__["useWorldStore"],
-          flatShading: true // vertexColors
-          // vertexTangents
-          ,
-          transparent: true // attach="material"
-          // wireframe
-          ,
-          clearcoat: 1,
-          clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
-          // color={0xffffff - 0xebf8fb}
-          // ior={1.0}
-          ,
-          color: 0xebf8fb // depthTest={false}
-          ,
-          ior: 2.3,
-          metalness: 0.92,
-          reflectivity: 0.9984 // metalness={0.098}
-          ,
-          roughness: 0.07062005,
-          children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
-            args: [0x010f0f] // args={[0x010000]}
+        children: texture => /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(CurrentFigure, {
+          children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])(_anonymous_club_ui__WEBPACK_IMPORTED_MODULE_1__["materials"].ClearOnHoverMaterial, {
+            useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_5__["useWorldStore"],
+            // flatShading
+            // vertexColors
+            // vertexTangents
+            transparent: true // attach="material"
+            // wireframe
             ,
-            attach: "emissive"
-          }, void 0, false, {
-            fileName: _jsxFileName,
-            lineNumber: 161,
-            columnNumber: 13
-          }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
-            args: [0xeeefdd] // args={[0x010000]}
+            clearcoat: 1,
+            clearcoatRoughness: 0.01 // clearcoatRoughness={0.5}
+            // color={0xffffff - 0xebf8fb}
+            // ior={1.0}
             ,
-            attach: "sheen"
-          }, void 0, false, {
+            color: 0xebf8fb // depthTest={false}
+            ,
+            envMap: texture,
+            envMapIntensity: 2,
+            ior: 2.3,
+            metalness: 0.92,
+            reflectivity: 0.9984 // metalness={0.098}
+            ,
+            roughness: 0.07062005,
+            children: [/*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
+              args: [0x010f0f] // args={[0x010000]}
+              ,
+              attach: "emissive"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 163,
+              columnNumber: 17
+            }, this), /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_11__["jsxDEV"])("color", {
+              args: [0xeeefdd] // args={[0x010000]}
+              ,
+              attach: "sheen"
+            }, void 0, false, {
+              fileName: _jsxFileName,
+              lineNumber: 168,
+              columnNumber: 17
+            }, this)]
+          }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 166,
-            columnNumber: 13
-          }, this)]
-        }, void 0, true, {
+            lineNumber: 138,
+            columnNumber: 15
+          }, this)
+        }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 138,
-          columnNumber: 11
+          lineNumber: 137,
+          columnNumber: 13
         }, this)
       }, void 0, false, {
         fileName: _jsxFileName,
@@ -4162,7 +4123,7 @@ function App() {
         width: 1000
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 180,
+        lineNumber: 182,
         columnNumber: 9
       }, this)]
     }, void 0, true, {
@@ -4173,7 +4134,7 @@ function App() {
       useWorldStore: _useWorldStore__WEBPACK_IMPORTED_MODULE_5__["useWorldStore"]
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 193,
+      lineNumber: 195,
       columnNumber: 7
     }, this)]
   }, void 0, true, {
@@ -5167,7 +5128,7 @@ var _jsxFileName = "/Users/coryhall/Code/FL/anonymous.club/apps/client/src/main.
 
 
 
-console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"6b9d804830447290b1f32dd5ab526b7d4001a1bf55979d31b5397fa46e59cae0","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/6b9d804830447290b1f32dd5ab526b7d4001a1bf55979d31b5397fa46e59cae0","NX_FORWARD_OUTPUT":"true"}));
+console.log(Object({"NODE_ENV":"development","NX_CLI_SET":"true","NX_TASK_HASH":"492213ff27949662205e227801c33cde5e6357c6ffdbd6c8be27ed3fb3a9b679","NX_INVOKED_BY_RUNNER":"true","NX_WORKSPACE_ROOT":"/Users/coryhall/Code/FL/anonymous.club","NX_TERMINAL_OUTPUT_PATH":"/Users/coryhall/Code/FL/anonymous.club/node_modules/.cache/nx/terminalOutputs/492213ff27949662205e227801c33cde5e6357c6ffdbd6c8be27ed3fb3a9b679","NX_FORWARD_OUTPUT":"true"}));
 react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react__WEBPACK_IMPORTED_MODULE_0__["StrictMode"], {
   children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["HashRouter"], {
     children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__["jsxDEV"])(_app_App__WEBPACK_IMPORTED_MODULE_3__["default"], {}, void 0, false, {
